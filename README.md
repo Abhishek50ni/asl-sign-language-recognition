@@ -33,6 +33,13 @@ This project builds a **real-time American Sign Language (ASL) alphabet recognit
 The project was built entirely from scratch — no pre-written pipelines or copied code — with the goal of learning every concept behind a production-level Deep Learning image classification system.
 
 ---
+## 🖼️ Screenshots
+
+### Image Upload & Prediction
+![Image Upload Prediction](screenshots/image_upload.png)
+
+### Live Webcam Prediction
+![Live Webcam](screenshots/camera_feed.png)
 
 ## 💡 Motivation
 

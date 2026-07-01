@@ -36,10 +36,10 @@ The project was built entirely from scratch — no pre-written pipelines or copi
 ## 🖼️ Screenshots
 
 ### Image Upload & Prediction
-![Image Upload Prediction](screenshots/image_upload.png)
+![Image Upload Prediction](image_upload.png)
 
 ### Live Webcam Prediction
-![Live Webcam](screenshots/camera_feed.png)
+![Live Webcam](camera_feed.png)
 
 ## 💡 Motivation
 

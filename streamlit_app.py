@@ -1,11 +1,3 @@
-"""
-streamlit_app.py
-ASL Sign Language Recognition - Streamlit Web Application
-
-Run with:
-    streamlit run streamlit_app.py
-"""
-
 import os
 import sys
 import json
@@ -13,11 +5,12 @@ import numpy as np
 from PIL import Image
 import streamlit as st
 
-# Hardcoded absolute path — avoids all Windows path resolution issues
-os.chdir(r"C:\Users\1abhi\Downloads\NON-AARTI\Sign_Language_ASL")
+# Smart path — works on both local Windows and Streamlit Cloud
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+os.chdir(BASE_DIR)
 
 # ---------------------------------------------------------
-# Page Configuration — must be first Streamlit command
+# Page Configuration
 # ---------------------------------------------------------
 st.set_page_config(
     page_title="ASL Sign Language Recognition",
@@ -27,11 +20,11 @@ st.set_page_config(
 )
 
 # ---------------------------------------------------------
-# Constants — must match MobileNetV2 training exactly
+# Constants
 # ---------------------------------------------------------
 IMG_SIZE = 96
-MODEL_PATH = r"C:\Users\1abhi\Downloads\NON-AARTI\Sign_Language_ASL\models\asl_mobilenet_final.keras"
-CLASS_INDICES_PATH = r"C:\Users\1abhi\Downloads\NON-AARTI\Sign_Language_ASL\models\class_indices.json"
+MODEL_PATH = os.path.join(BASE_DIR, "models", "asl_mobilenet_final.keras")
+CLASS_INDICES_PATH = os.path.join(BASE_DIR, "models", "class_indices.json")
 CONFIDENCE_THRESHOLD = 0.70
 # ---------------------------------------------------------
 # Load model and class indices (cached — loads only once)
